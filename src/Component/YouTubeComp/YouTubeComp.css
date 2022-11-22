@@ -3,6 +3,9 @@
     width: 210px;
     box-sizing: border-box;
     margin-right: 12px;
+    margin-left: 12px;
+    margin-top: 12px;
+    padding: 10px;
 }
 
 .img-thumb {
@@ -10,6 +13,7 @@
     height: 118px;
     overflow: hidden;
     position: relative;
+    border-radius: 12px;
 }
 
 .img-thumb img{
