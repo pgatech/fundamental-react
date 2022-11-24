@@ -1,10 +1,11 @@
 import React, {Component} from "react";
 import YouTubeComp from "../../Component/YouTubeComp/YouTubeComp";
+import LifeCycleComp from "../LifeCycleComp/LifeCycleComp";
 
 const Home = () => {
     return (
         <div>
-            <YouTubeComp 
+            {/* <YouTubeComp 
             time="3:32"
             title="Ini adalah video yang mempunyai bagian part 1"
             desc="1932x ditonton 5 hari yang lalu"
@@ -24,7 +25,10 @@ const Home = () => {
             title="Ini adalah video yang mempunyai bagian part 4"
             desc="947x ditonton 2 hari yang lalu"
             />
-            <YouTubeComp />
+            <YouTubeComp /> */}
+            <p>LifeCycle Component</p>
+            <hr/>
+            <LifeCycleComp />
         </div>
     )
 }
