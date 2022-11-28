@@ -1,6 +1,7 @@
 import React, {Component, Fragment} from "react";
 import Post from "../Post/Post";
 import './BlogPost.css';
+import axios from "axios";
 
 class BlogPost extends Component {
     state = {
@@ -8,11 +9,18 @@ class BlogPost extends Component {
     }
 
     componentDidMount(){
-        fetch('https://jsonplaceholder.typicode.com/posts')
-        .then(response => response.json())
-        .then(json => {
-            this.setState({
-                post: json 
+        // fetch('https://jsonplaceholder.typicode.com/posts')
+        // .then(response => response.json())
+        // .then(json => {
+        //     this.setState({
+        //         post: json 
+        //     })
+        // })
+        axios.get('https://jsonplaceholder.typicode.com/posts')
+        .then((result)=> {
+            console.log(result.data);
+            this.setState ({
+                post: result.data
             })
         })
     }
