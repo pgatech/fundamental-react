@@ -1,6 +1,7 @@
 import React, {Component} from "react";
-import YouTubeComp from "../../Component/YouTubeComp/YouTubeComp";
-import LifeCycleComp from "../LifeCycleComp/LifeCycleComp";
+// import YouTubeComp from "../../Component/YouTubeComp/YouTubeComp";
+// import LifeCycleComp from "../LifeCycleComp/LifeCycleComp";
+import BlogPost from "../../Component/BlogPost/BlogPost";
 
 const Home = () => {
     return (
@@ -26,9 +27,12 @@ const Home = () => {
             desc="947x ditonton 2 hari yang lalu"
             />
             <YouTubeComp /> */}
-            <p>LifeCycle Component</p>
+            {/* <p>LifeCycle Component</p>
             <hr/>
-            <LifeCycleComp />
+            <LifeCycleComp /> */}
+            <p>Blog Post</p>
+            <hr />
+            <BlogPost />
         </div>
     )
 }
