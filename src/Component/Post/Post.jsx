@@ -1,5 +1,7 @@
 import React from "react";
 
+
+// StateLess Component
 const Post = (props) => {
     return(
         <div className="post">
