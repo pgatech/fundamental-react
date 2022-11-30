@@ -9,6 +9,13 @@ class BlogPost extends Component {
         post: []
     }
 
+
+    handleRemove = (data) => {
+        axios.delete('http://localhost:3004/posts/${data}').then((res)=>{
+            console.log(res);
+        })
+    }
+
     componentDidMount(){
 
         //Pemanggilan API GET default
@@ -19,7 +26,7 @@ class BlogPost extends Component {
         //         post: json 
         //     })
         // })
-        axios.get('https://jsonplaceholder.typicode.com/posts')
+        axios.get('http://localhost:3004/posts')
         .then((result)=> {
             console.log(result.data);
             this.setState ({
@@ -38,7 +45,7 @@ class BlogPost extends Component {
                     this.state.post.map(post => {
                         return (
                             // Props Key Title Desc
-                            <Post key={post.id} title={post.title} desc={post.body}/>
+                            <Post key={post.id} data={post} remove={this.handleRemove}/>
                         )
                     })
                 }
