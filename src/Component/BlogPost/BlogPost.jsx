@@ -19,8 +19,6 @@ class BlogPost extends Component {
         //         post: json 
         //     })
         // })
-
-        // Pemanggilan GET API via Axios
         axios.get('https://jsonplaceholder.typicode.com/posts')
         .then((result)=> {
             console.log(result.data);
